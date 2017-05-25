@@ -32,6 +32,17 @@
                UpdateTargetId = "divMessage",
                InsertionMode = InsertionMode.InsertAfter
            })
+        <hr />
+        @using (Ajax.BeginForm("HelloWorld2", "Home", new AjaxOptions
+           {
+               HttpMethod = "GET",
+               UpdateTargetId = "divMessage",
+               InsertionMode = InsertionMode.InsertAfter
+           }))
+            {
+                <input type="text" name="username" />
+                <input type="submit" />
+            }
     </div>
 
     <script src="~/Scripts/jquery-2.1.4.js"></script>
